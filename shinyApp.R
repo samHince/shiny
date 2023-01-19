@@ -2,11 +2,15 @@ library(shiny)
 
 # Define UI ----
 ui <- fluidPage(
-  titlePanel("Sam's App - Now on GitHub"),
+  titlePanel("Pace Calculator"),
   
   sidebarLayout(
-    sidebarPanel("sidebar panel"),
-    mainPanel("main panel")
+    sidebarPanel("Some useful information about this app... if you want to support my project, hit up the venmo"),
+    mainPanel(
+      textInput("Distance", "Distance", "Data Summary"),
+      textInput("Time", "Time", "Data Summary"),
+      textInput("Pace", "Pace", "Data Summary")
+    )
   )
 )
 
