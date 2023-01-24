@@ -24,14 +24,19 @@ ui <- fluidPage( #
         column(2, selectInput("distUnits", "Units",
                               c("Min per Mile",
                                 "Min per Km")))
-      )
+      ),
+      # test 
+      textOutput("pace_out")
+      # end test code
     )
   )
 )
 
 # Define server logic ----
 server <- function(input, output) {
-  
+  output$pace_out <- {(
+    renderText(input$time)
+  )}
 }
 
 # Run the app ----
