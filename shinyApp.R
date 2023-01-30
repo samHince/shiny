@@ -58,8 +58,8 @@ server <- function(input, output, session) {
   })
   
   output$pace_out <- renderText({
-    #as.numeric(input$time)
-    caldpace
+    as.numeric(input$time) / as.numeric(input$dist)
+    #caldpace
     #input$dist / input$time
     #values$time
   })
